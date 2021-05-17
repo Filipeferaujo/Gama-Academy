@@ -1191,8 +1191,20 @@ console.log(departamento)
 }
 
 function exercicio7() {
+    let estoqueTotal = 0;
+    let inventario = 0;
+    let ticketMedio = 0;
+    for (i=0; i < listaProdutos.length; i++) {
+
+        estoqueTotal = estoqueTotal + listaProdutos[i].qtdEstoque;
+        inventario = inventario + (listaProdutos[i].preco * listaProdutos[i].qtdEstoque)
+
+        ticketMedio = inventario/estoqueTotal;
+    }
+
+
+    console.log("o ticket médio da loja é: " + ticketMedio);
 }
-// Valor do ticket médio dos produtos da empresa (basicamente o valor total do inventário dividido pelo número de itens)
 
 
 
